@@ -1,39 +1,22 @@
 #ifndef ITEM_HPP
 #define ITEM_HPP
 
-#include <iostream>
 #include <string>
 #include "FilaEspera.hpp"
 
-using namespace std;
-
 class Item {
 public:
-    string chave;
-    string nome;
-    string categoria;
-    string localizacao;
+    std::string chave;
+    std::string nome;
+    std::string categoria;
+    std::string localizacao;
     int quantidade;
-    string condicao;
-    FilaEspera fila; // Objeto da fila
-    
-    Item(string key, string name, string type, string local, int qnt, string cond){
-        chave = key;
-        nome = name;
-        categoria = type;
-        localizacao = local;
-        quantidade = qnt;
-        condicao = cond;
-    }
+    std::string condicao;
+    FilaEspera fila; 
 
-    void ExibirDetalhes(){
-        cout << "===================================="<< "\n";
-        cout << "ID: " << chave << " | Nome: " << nome << "\n";
-        cout << "Categoria: " << categoria << " | Qtd: " << quantidade << "\n";
-        cout << "Local: "<< localizacao << " | Cond: "<< condicao << "\n";
-        fila.imprimirFila();
-        cout << "===================================="<<"\n";
-    }
+    Item(std::string key, std::string name, std::string type, std::string local, int qnt, std::string cond);
+    
+    void exibirDetalhes();
 };
 
 #endif

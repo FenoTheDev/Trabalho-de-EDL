@@ -7,9 +7,8 @@ class NoFila {
 public:
     Usuario user;
     NoFila* proximo;
-    NoFila(Usuario u) : user(u) { 
-        this->proximo = nullptr; 
-    }
+
+    NoFila(Usuario u);
 };
 
 #endif

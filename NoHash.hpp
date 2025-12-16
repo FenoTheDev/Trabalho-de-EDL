@@ -8,10 +8,7 @@ public:
     Item* item;
     NoHash* proximo;
 
-    NoHash(Item* i){
-        item = i;
-        proximo = nullptr;
-    }
+    NoHash(Item* i);
 };
 
 #endif
